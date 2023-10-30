@@ -1,0 +1,18 @@
+public class TelaContador {
+    public static void main(String[] args) {
+        char c = 'c';
+        String i = String.valueOf(10);
+        double d = 10;
+        long l = 1;
+        String s = "Hello";
+
+        /*
+         ERRO C= C + i;
+         CORRETA s +=i;
+        */
+        //i += s;
+        //c += s;
+        // ERRO c +=s;
+        // i +=l;
+    }
+}
