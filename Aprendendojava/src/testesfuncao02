@@ -1,0 +1,28 @@
+package testesfuncao02;
+
+
+
+
+
+public class testesfuncao02 {
+
+
+
+
+
+ static void soma(int a, int b) {
+    int s = a + b;
+    System.out.println("A soma é " + s);
+}
+
+    public static void main (String[] args) {
+        System.out.println("Começou o programa");
+     soma(5,2);
+        System.out.println("Oi galera tudo bem? ");
+        System.out.println("Estou apredendo a programar em Java já faz algum tempo");
+        System.out.println("Estou melhorando todos os dias que realizo novos testes");
+        System.out.println("Sei da imporrtancia que é estudar na pratica todos os dias");
+        System.out.println("Estou daqui alguns meses está cada vez melhor");
+
+    }
+}
