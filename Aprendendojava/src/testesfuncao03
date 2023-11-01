@@ -1,0 +1,24 @@
+package testesfuncao03;
+
+
+
+
+
+public class testesfuncao03 {
+
+
+
+
+
+ static int soma(int a, int b) {
+    int s = a + b;
+    return s;
+}
+
+    public static void main (String[] args) {
+        System.out.println("Começou o programa, da nova programadora que está estudando e apredendo a liguagem em java");
+     int sm = soma(5,2);
+        System.out.println("A soma vale  " + sm);
+
+    }
+}
