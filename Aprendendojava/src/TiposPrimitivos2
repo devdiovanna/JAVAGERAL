@@ -1,0 +1,8 @@
+package TiposPrimitivos2;
+
+public class TiposPrimitivos2 {
+    public static void main(String[] args){
+        float nota = 8.5f;
+        System.out.printf("A Nota é %.2f", nota);
+    }
+}
