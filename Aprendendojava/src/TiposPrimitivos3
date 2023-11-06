@@ -1,0 +1,28 @@
+package TiposPrimitivos;
+
+import java.util.Scanner;
+
+public class TiposPrimitivos {
+    public static void main(String[] args){
+        // Create a Scanner object to read input from the keyboard
+        Scanner teclado = new Scanner(System.in);
+
+        // Declare variables to store the user's name and grade
+        String nome;
+        float nota;
+
+        // Prompt the user to enter their name
+        System.out.println("Digite seu nome:");
+        nome = teclado.nextLine();
+
+        // Prompt the user to enter their grade
+        System.out.println("Digite sua nota:");
+        nota = teclado.nextFloat();
+
+        // Display the user's name and grade using the format() method
+        System.out.format("A nota de %s é %.5f \n", nome, nota);
+
+        // Close the Scanner object
+        teclado.close();
+    }
+}
