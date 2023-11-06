@@ -1,0 +1,11 @@
+package OperadoresAritimeticos;
+
+public class OperadoresAritimeticos {
+    public static void main(String[] args)  {
+        int n1 = 3;
+        int n2 = 5;
+        double m = Math.sqrt(2);
+        m = n1 +n2/2;
+        System.out.println("A media é igual a " + m);
+    }
+}
