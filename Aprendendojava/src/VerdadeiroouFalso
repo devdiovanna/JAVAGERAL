@@ -1,0 +1,32 @@
+package VerdadeiroouFalso;
+
+public class VerdadeiroouFalso {
+    public static void main(String[] args) {
+        int idade = 0;
+        int altura = 0;
+
+        // Soma a idade e a altura
+        int soma = idade + altura;
+
+        // Calcula a diferença entre a altura e a idade
+        double diferenca = altura - idade;
+
+        // Declara a variável `letra` e a inicializa com o valor 'a'
+        char letra = 'a';
+
+        // Calcula o produto da letra por 2
+        int produto = (char) (letra * 2);
+
+        // Declara a variável `verdade` e a inicializa com o valor true
+        boolean verdade = true;
+
+        // Verifica se a altura é maior que a idade
+        boolean condicao = verdade && altura > idade;
+
+        // Imprime os resultados
+        System.out.println("A soma é: " + soma);
+        System.out.println("A diferença é: " + diferenca);
+        System.out.println("O produto é: " + produto);
+        System.out.println("A condição é: " + condicao);
+    }
+}
