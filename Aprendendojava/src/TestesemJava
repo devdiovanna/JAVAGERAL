@@ -1,0 +1,15 @@
+package TestesemJava;
+
+public class TestesemJava {
+    public static void main(String[] args) {
+        int idade = 0;
+        int altura = 0;
+        int soma = idade + altura;
+        double diferenca = altura - idade;
+        char letra = 'a';
+        char produto = (char) (letra * 2);
+        boolean verdade = true;
+        boolean condicao = verdade && altura > idade;
+
+    }
+}
