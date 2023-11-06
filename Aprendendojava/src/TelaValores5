@@ -1,0 +1,12 @@
+package TelaValores2;
+
+public class TelaValores2 {
+    public static void main(String[] args) {
+
+
+
+        float v  = 8.6f;
+        int ar = (int) Math.round (v);
+        System.out.println(ar);
+    }
+}
