@@ -1,0 +1,23 @@
+package OperadoresSwing;
+
+public class OperadoresSwing {
+    public static void main(String[] args) {
+        System.out.println("Estou criando o meu próprio código");
+        System.out.println("Para aprender a programar é necessário treinar todos os dias");
+        System.out.println("A linguagem em Java é sensacional, estou gostando bastante");
+
+        // Correção dos erros:
+        int n1;
+        int n2;
+
+        // Declaração das variáveis n1 e n2
+        n1 = 2;
+        n2 = 3;
+
+        // Cálculo da média
+        int m = (n1 + n2) / 2;
+
+        // Impressão da média
+        System.out.println("A média é igual a " + m);
+    }
+}
