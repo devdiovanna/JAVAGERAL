@@ -1,0 +1,16 @@
+package TelaValores;
+
+public class TelaValores {
+    public static void main(String[] args) {
+        int n1 = 3;
+        int n2 = 5;
+        int rounded = Math.round(1);
+        int m = (n1 + n2) / 2;
+        System.out.println("A Media é igual a" + m);
+        int numerous = 5;
+        int numero1 = numerous;
+        numero1 ++;
+        System.out.println(numerous);
+
+    }
+}
