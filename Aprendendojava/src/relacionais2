@@ -1,0 +1,13 @@
+package relacionais;
+
+public class Relacionais {
+    public static void main(String[] args) {
+        String n1;
+        n1 = "Gus";
+        String n2 = "Gus";
+        String n3 = new String("Gus");
+
+        String res = (n1.equals(n2)) ? "igual" : "diferente";
+        System.out.println(res);
+    }
+}
