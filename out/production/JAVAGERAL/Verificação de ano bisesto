@@ -1,0 +1,31 @@
+package Vetor02;
+
+import java.util.Calendar;
+
+public class Vetor02 {
+    public static void main(String[] args) {
+
+        String mes [] = {"Jan", "Fer", "Mar", "Abr", "Mai", "Jun", "Julh", "Agos", "Set", "Out", "Nov", "Dez"};
+        int tot [] = {31,28,31,30,31,30,31,30,31,30,31,30};
+
+        // Obtém o ano atual
+        Calendar calendar = Calendar.getInstance();
+        int ano = calendar.get(Calendar.YEAR);
+
+        // Verifica se o ano é bissexto
+        boolean bissexto = (ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0;
+
+        for(int c=0; c<mes.length; c++){
+            // Imprime o mês e o número de dias
+            System.out.println(" O mês de " + mes [c] + "tem" +
+                    tot[c] + " dias ao todo.");
+
+            // Se o ano for bissexto, imprime um aviso
+            if (bissexto) {
+                if (c == 1) {
+                    System.out.println("O ano de " + ano + " é bissexto.");
+                }
+            }
+        }
+    }
+}
