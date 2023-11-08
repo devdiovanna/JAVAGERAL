@@ -1,0 +1,28 @@
+package oi;
+
+public class oi {
+    public static void main(String[] args) {
+        String txt = null;
+        int a;
+        int b;
+
+        try {
+            // Assuming "txt" is already initialized with a string value
+            a = Integer.parseInt(txt);
+            b = Integer.parseInt(args[0]);
+
+            System.out.println("a = " + a);
+            System.out.println("b = " + b);
+
+            // Soma
+            int soma = a + b;
+            System.out.println("a + b = " + soma);
+
+            // Divisão
+            int divisao = a / b;
+            System.out.println("a / b = " + divisao);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input: " + e.getMessage());
+        }
+    }
+}
