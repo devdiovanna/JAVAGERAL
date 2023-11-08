@@ -1,0 +1,21 @@
+package ClassedeEstudos;
+
+import java.util.Scanner;
+
+public class ClassedeEstudos {
+    public static void main(String[] args) {
+        int n, s=0;
+        String resp;
+        Scanner teclado = new Scanner(System.in);
+        do {
+            System.out.print("Digite um número: ");
+            n = teclado.nextInt();
+            s += n;
+            System.out.print("Quer continaur? [S/N]");
+            resp = teclado.next();
+        } while (resp.equals("S") || resp.equals("Sim") || resp.equals("s") || resp.equals("sim"));//Este é o exato comando que será mudado
+        System.out.println("A soma dos números é: " +s);
+
+
+    }
+}
