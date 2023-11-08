@@ -1,0 +1,13 @@
+package Javatestes;
+
+public class Javatestes {
+    public static void main(String[] args) {
+        int cc= 0;
+        do {
+            System.out.print("Estudando Java, estou amando");
+            cc++;
+        } while (cc<4);
+
+        }
+}
+
