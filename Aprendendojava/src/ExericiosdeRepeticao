@@ -1,0 +1,11 @@
+package ExericiosdeRepeticao;
+
+public class ExerciserRepetition {
+    public static void main(String[] args) {
+        int[] n = {3, 2, 8, 7}; // Declare 'n' as an array
+
+        for (int c = 0; c < n.length; c++) { // Set the loop condition to iterate up to the length of the array
+            System.out.println("Na posição " + c + " temos o valor " + n[c]);
+        }
+    }
+}
