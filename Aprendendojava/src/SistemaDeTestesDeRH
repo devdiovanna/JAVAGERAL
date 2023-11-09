@@ -1,0 +1,73 @@
+package RH;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class RH {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Bem-vindo ao sistema de RH!");
+
+        // Solicite as informações do candidato
+        System.out.println("Digite o nome do candidato:");
+        String nome = scanner.nextLine();
+
+        System.out.println("Digite o e-mail do candidato:");
+        String email = scanner.nextLine();
+
+        System.out.println("Digite o cargo que o candidato está se candidatando:");
+        String cargo = scanner.nextLine();
+
+        // Crie uma lista de testes
+        List<Teste> testes = new ArrayList<>();
+
+        testes.add(new Teste("Qual é a capital do Brasil?", "Brasília"));
+        testes.add(new Teste("Qual é a fórmula da água?", "H2O"));
+        testes.add(new Teste("Qual é a raiz quadrada de 16?", "4"));
+
+        // Execute os testes
+        for (Teste teste : testes) {
+            System.out.println(teste.pergunta);
+            String resposta = scanner.nextLine();
+
+            // Verifique se a resposta é correta
+            if (resposta.equals(teste.resposta)) {
+                // Se sim, incremente a pontuação do candidato
+                teste.pontuacao++;
+            }
+        }
+
+        // Calcule a pontuação total do candidato
+        int pontuacaoTotal = 0;
+        for (Teste teste : testes) {
+            pontuacaoTotal += teste.pontuacao;
+        }
+
+        // Determine se o candidato foi aprovado
+        boolean aprovado = pontuacaoTotal >= 2;
+
+        // Exiba o resultado do candidato
+        if (aprovado) {
+            System.out.println("O candidato foi aprovado!");
+        } else {
+            System.out.println("O candidato não foi aprovado!");
+        }
+    }
+
+}
+
+class Teste {
+
+    String pergunta;
+    String resposta;
+    int pontuacao;
+
+    public Teste(String pergunta, String resposta) {
+        this.pergunta = pergunta;
+        this.resposta = resposta;
+        this.pontuacao = 0;
+    }
+}
