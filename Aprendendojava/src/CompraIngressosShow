@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class CompraIngressosShow {
+
+    public static void main(String[] args) {
+        // Declara as variáveis necessárias
+        Scanner scanner = new Scanner(System.in);
+        int quantidadeIngressosInteira = 0;
+        int quantidadeIngressosMeia = 0;
+        int valorIngressoInteira = 100;
+        int valorIngressoMeia = 50;
+        int valorTotalIngressos = 0;
+
+        // Solicita ao usuário a quantidade de ingressos de inteira
+        System.out.println("Quantos ingressos de inteira deseja comprar?");
+        quantidadeIngressosInteira = scanner.nextInt();
+
+        // Solicita ao usuário a quantidade de ingressos de meia
+        System.out.println("Quantos ingressos de meia deseja comprar?");
+        quantidadeIngressosMeia = scanner.nextInt();
+
+        // Calcula o valor dos ingressos de inteira
+        valorTotalIngressos += quantidadeIngressosInteira * valorIngressoInteira;
+
+        // Calcula o valor dos ingressos de meia
+        valorTotalIngressos += quantidadeIngressosMeia * valorIngressoMeia;
+
+        // Exibe o valor total dos ingressos
+        System.out.println("O valor total dos ingressos é de " + valorTotalIngressos + " reais.");
+    }
+}
