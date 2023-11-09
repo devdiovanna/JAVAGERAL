@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class AlterarVPN {
+
+    public static void main(String[] args) {
+        // Solicita ao usuário o nome do aplicativo de VPN
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Qual é o nome do aplicativo de VPN?");
+        String nomeAplicativoVPN = scanner.nextLine();
+
+        // Solicita ao usuário o nome do servidor VPN nos Estados Unidos
+        System.out.println("Qual é o nome do servidor VPN nos Estados Unidos?");
+        String nomeServidorVPNEUA = scanner.nextLine();
+
+        // Abre o aplicativo de VPN
+        try {
+            Process process = Runtime.getRuntime().exec(nomeAplicativoVPN);
+            process.waitFor();
+        } catch (Exception e) {
+            System.out.println("Ocorreu um erro ao abrir o aplicativo de VPN.");
+            e.printStackTrace();
+            System.exit(1);
+        }
+
+        // Conecta-se ao servidor VPN nos Estados Unidos
+        try {
+            Process process = Runtime.getRuntime().exec("pkill -KILL " + nomeAplicativoVPN);
+            process.waitFor();
+
+            process = Runtime.getRuntime().exec("openvpn --config " + nomeServidorVPNEUA);
+            process.waitFor();
+        } catch (Exception e) {
+            System.out.println("Ocorreu um erro ao conectar-se ao servidor VPN.");
+            e.printStackTrace();
+            System.exit(1);
+        }
+
+        // Exibe uma mensagem de sucesso
+        System.out.println("A VPN foi alterada para os Estados Unidos.");
+    }
+}
