@@ -1,0 +1,30 @@
+package Exemplos;
+
+public class Exemplos {
+
+    public static void main(String[] args) {
+        // Declara a classe Pessoa
+        class Pessoa {
+            // Declara os atributos da classe
+            private String nome;
+            private int idade;
+
+            // Declara o construtor da classe
+            public Pessoa(String nome, int idade) {
+                this.nome = nome;
+                this.idade = idade;
+            }
+
+            // Declara o método getNome()
+            public String getNome() {
+                return this.nome;
+            }
+        }
+
+        // Cria um objeto da classe Pessoa
+        Pessoa p1 = new Pessoa("Miguel", 42);
+
+        // Exibe o nome do objeto
+        System.out.println(p1.getNome());
+    }
+}
