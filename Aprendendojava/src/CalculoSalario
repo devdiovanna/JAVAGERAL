@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class CalculoSalario {
+
+    public static void main(String[] args) {
+        // Declara o scanner para ler a entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita o valor do salário
+        System.out.println("Digite o valor do salário: ");
+        double salario = scanner.nextDouble();
+
+        // Cria um objeto da classe CalculoSalario
+        CalculoSalario calculoSalario = new CalculoSalario();
+
+        // Calcula os descontos
+        double inss = calculoSalario.calcularINSS(salario);
+        double ir = calculoSalario.calcularIR(salario);
+        double salarioLiquido = salario - inss - ir;
+
+        // Exibe os resultados
+        System.out.println("Desconto do INSS: R$ " + inss);
+        System.out.println("Desconto do Imposto de Renda: R$ " + ir);
+        System.out.println("Salário líquido: R$ " + salarioLiquido);
+    }
+
+    // Calcula os descontos do INSS
+    private double calcularINSS(double salario) {
+        // Tabela de alíquotas do INSS 2023
+        if (salario <= 1320.00) {
+            return salario * 0.075;
+        } else if (salario <= 2571.29) {
+            return salario * 0.09;
+        } else if (salario <= 3856.94) {
+            return salario * 0.12;
+        } else {
+            return salario * 0.14;
+        }
+    }
+
+    // Calcula os descontos do Imposto de Renda
+    private double calcularIR(double salario) {
+        // Tabela de alíquotas do Imposto de Renda 2023
+        if (salario <= 1903.98) {
+            return 0;
+        } else if (salario <= 800.00) {
+            return salario * 0.075;
+        } else if (salario <= 3751.05) {
+            return salario * 0.15;
+        } else if (salario <= 4664.68) {
+            return salario * 0.225;
+        } else {
+            return salario * 0.275;
+        }
+    }
+}
