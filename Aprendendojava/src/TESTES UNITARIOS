@@ -1,0 +1,19 @@
+public class Tabuada {
+
+    public static String calculaTabuada(int numero) {
+        StringBuilder resultado = new StringBuilder();
+
+        for (int i = 1; i <= 10; i++) {
+            int resultadoMultiplicacao = numero * i;
+            resultado.append(numero).append(" x ").append(i).append(" = ").append(resultadoMultiplicacao).append("\n");
+        }
+
+        return resultado.toString();
+    }
+
+    public static void main(String[] args) {
+        // Exemplo de uso
+        int numero = 7;
+        System.out.println(calculaTabuada(numero));
+    }
+}
