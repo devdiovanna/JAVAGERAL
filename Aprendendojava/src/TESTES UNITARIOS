@@ -1,19 +1,28 @@
-public class Tabuada {
+import org.junit.Test;
 
-    public static String calculaTabuada(int numero) {
-        StringBuilder resultado = new StringBuilder();
+import static org.junit.Assert.assertEquals;
 
-        for (int i = 1; i <= 10; i++) {
-            int resultadoMultiplicacao = numero * i;
-            resultado.append(numero).append(" x ").append(i).append(" = ").append(resultadoMultiplicacao).append("\n");
-        }
+public class TabuadaTest {
 
-        return resultado.toString();
-    }
+    @Test
+    public void testCalculaTabuada() {
+        // Arrange
+        int numero = 5;
+        String resultadoEsperado = "5 x 1 = 5\n" +
+                "5 x 2 = 10\n" +
+                "5 x 3 = 15\n" +
+                "5 x 4 = 20\n" +
+                "5 x 5 = 25\n" +
+                "5 x 6 = 30\n" +
+                "5 x 7 = 35\n" +
+                "5 x 8 = 40\n" +
+                "5 x 9 = 45\n" +
+                "5 x 10 = 50\n";
 
-    public static void main(String[] args) {
-        // Exemplo de uso
-        int numero = 7;
-        System.out.println(calculaTabuada(numero));
+        // Act
+        String resultadoReal = Tabuada.calculaTabuada(numero);
+
+        // Assert
+        assertEquals(resultadoEsperado, resultadoReal);
     }
 }
