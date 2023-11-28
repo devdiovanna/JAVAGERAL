@@ -1,0 +1,72 @@
+import java.text.MessageFormat;
+
+public class mainn {
+    // Método = Função
+    // o método principal é responsavbel por dar inicio a execução de um programa em java
+    public static void main(String[] args) {
+
+        // Tipagem Dinâmica - JavaScript
+        // Tipagem Estática - Java
+        // Int -> Double -> Dobro
+        // Float -> Float -> Flutuante (Numerico)
+        // boolean -> Boolean (Lógico)
+        // String  -> Sequencia ou Cadeia (Textuais)
+        // chat -> Charactere -> Caractere (Numero/Textual)
+        int numero = 2147483647;
+        long inteiroLongo = 2147483647L;
+        double flutuanteLongo = 43534345.34;
+        boolean logico = false;
+        char letra = 'I';
+        //letra = 'G';
+        ///integer = 17;
+        String nome = "Gabriel gosta de chocolate";
+
+        int num1 = 5;
+        int num2 = 3;
+
+        /*int resultadoAND = num1 & num2;
+        int resultadoAND;
+        resultadoAND = num2 | num2;
+        int resltadoXor = num1 ^ num2;
+        int resultadoNOt = ~num1;*/
+
+        /*System.out.println("nome");
+        System.out.println(nome);
+        if (x > 0) {
+            System.out.println("O número é positivo.");
+        } else {
+            System.out.println("O número não é positivo");*/
+
+            // condicionais
+
+
+            // Estrutura de seleção
+
+            int dia = 3;
+            String nomeDoDia;
+
+            switch (dia){
+            case 1:
+                nomeDoDia = "Domingo";
+                break;
+                case 2:
+                nomeDoDia = " Segunda-Feira";
+                break;
+                default:
+                    nomeDoDia = "Outro dia";
+                    System.out.println("Hoje é: " + nomeDoDia);
+                    System.out.println();
+
+                    // import java.text.MessageFormat;
+                    String mensagem = MessageFormat.format("Hoje é: {0}", nomeDoDia);
+                    System.out.println("mensagem");
+
+                    String msg = String.format("Hoje é: %s", nomeDoDia);
+
+
+
+            }
+
+    }
+}
+
