@@ -1,0 +1,100 @@
+import java.util.Scanner;
+
+public class AtividadeEstruturasDeRepeticaos {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Soma dos Números
+        System.out.println("Soma dos Números");
+        System.out.println("Digite um número inteiro positivo:");
+        int n = scanner.nextInt();
+
+        int soma = 0;
+        for (int i = 1; i <= n; i++) {
+            soma += i;
+        }
+
+        System.out.println("A soma dos números de 1 a " + n + " é " + soma);
+
+        // Tabuada
+        System.out.println("\nTabuada");
+        System.out.println("Digite um número:");
+        int n2 = scanner.nextInt();
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(n2 + " x " + i + " = " + n2 * i);
+        }
+
+        // Fatorial
+        System.out.println("\nFatorial");
+        System.out.println("Digite um número não negativo:");
+        int n3 = scanner.nextInt();
+
+        int fatorial = 1;
+        for (int i = 1; i <= n3; i++) {
+            fatorial *= i;
+        }
+
+        System.out.println("O fatorial de " + n3 + " é " + fatorial);
+
+        // Números Primos
+        System.out.println("\nNúmeros Primos");
+        System.out.println("Digite um número inteiro positivo:");
+        int n4 = scanner.nextInt();
+
+        boolean primo = true;
+        for (int i = 2; i <= Math.sqrt(n4); i++) {
+            if (n4 % i == 0) {
+                primo = false;
+                break;
+            }
+        }
+
+        if (primo) {
+            System.out.println("O número " + n4 + " é primo.");
+        } else {
+            System.out.println("O número " + n4 + " não é primo.");
+        }
+
+        // Série Fibonacci
+        System.out.println("\nSérie Fibonacci");
+        System.out.println("Digite um número:");
+        int n5 = scanner.nextInt();
+
+        int a = 0;
+        int b = 1;
+        System.out.println("0, 1");
+        for (int i = 2; i <= n5; i++) {
+            int c = a + b;
+            System.out.println(c);
+            a = b;
+            b = c;
+        }
+
+        // Média de Notas
+        System.out.println("\nMédia de Notas");
+        int nota;
+        double media = 0;
+        int qtdNotas = 0;
+
+        while (true) {
+            System.out.println("Digite uma nota (-1 para parar):");
+            nota = scanner.nextInt();
+
+            if (nota == -1) {
+                break;
+            }
+
+            media += nota;
+            qtdNotas++;
+        }
+
+        if (qtdNotas > 0) {
+            media /= qtdNotas;
+            System.out.println("A média das notas é " + media);
+        } else {
+            System.out.println("Nenhuma nota foi inserida.");
+        }
+    }
+}
