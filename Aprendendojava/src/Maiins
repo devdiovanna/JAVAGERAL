@@ -1,0 +1,28 @@
+import java.util.Arrays;
+
+public class Maiin {
+    public static void main(String[] args) {
+        int[] meuVetor = {10, 20, 30, 40, 50}; // Declare and initialize the array
+
+        for (int i = 0; i < meuVetor.length; i++) { // Corrected loop condition
+            System.out.println("Elemento" + i + ": " + meuVetor[i]); // Corrected output format
+            System.out.println("Vetor Original");
+            for (int elemento : meuVetor){
+                System.out.println(elemento);
+            }
+            int novoElemento1 = 60;
+            int novoElemento2 = 70;
+
+            // Criar um novo vetor com tamanho maior
+            meuVetor = Arrays.copyOf(meuVetor, meuVetor.length + 2);
+               int[] nonoVetor = new int[novoElemento1];
+
+            // Adicionar os novos elementos no final do vetor
+
+            meuVetor[meuVetor.length -2] = novoElemento2;
+            System.out.println("Vetor com elementos:");
+
+
+        }
+    }
+}
