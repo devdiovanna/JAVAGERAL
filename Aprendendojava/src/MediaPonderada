@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class MediaPonderada {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite o número de disciplinas:");
+        int qtdDisciplinas = scanner.nextInt();
+
+        double[] notas = new double[qtdDisciplinas];
+        double[] pesos = new double[qtdDisciplinas];
+
+        for (int i = 0; i < qtdDisciplinas; i++) {
+            System.out.println("Digite a nota da disciplina " + (i + 1) + ":");
+            notas[i] = scanner.nextDouble();
+
+            System.out.println("Digite o peso da disciplina " + (i + 1) + ":");
+            pesos[i] = scanner.nextDouble();
+        }
+
+        double mediaPonderada = 0;
+        for (int i = 0; i < qtdDisciplinas; i++) {
+            mediaPonderada += notas[i] * pesos[i];
+        }
+
+        System.out.println("A média ponderada é " + mediaPonderada);
+    }
+}
