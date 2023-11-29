@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ContadorDIgitos {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite um número inteiro:");
+        int numero = scanner.nextInt();
+
+        int digitos = 0;
+        while (numero > 0) {
+            numero = numero / 10;
+            digitos++;
+        }
+
+        System.out.println("O número " + numero + " tem " + digitos + " dígitos.");
+    }
+}
