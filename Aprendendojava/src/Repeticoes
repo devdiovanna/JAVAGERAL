@@ -1,0 +1,27 @@
+package Repeticoes;
+
+import java.util.Scanner;
+
+public class Repeticoes {
+    public static void main(String[] args) {
+        System.out.println("Estudando Repetições");
+
+        // For loop
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i);
+            System.out.println(" O Valor de i é: " + i);
+        }
+
+        // While loop
+        Scanner scanner = new Scanner(System.in);
+        int numero;
+        do {
+            System.out.print("Enter a positive number: ");
+            numero = scanner.nextInt();
+        } while (numero <= 0);
+
+        System.out.println("The entered number is: " + numero);
+
+        System.out.println("Final");
+    }
+}
