@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class NumerosPrimos {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite um número inteiro positivo:");
+        int n = scanner.nextInt();
+
+        boolean primo = true;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                primo = false;
+                break;
+            }
+        }
+
+        if (primo) {
+            System.out.println("O número " + n + " é primo.");
+        } else {
+            System.out.println("O número " + n + " não é primo.");
+        }
+    }
+}
