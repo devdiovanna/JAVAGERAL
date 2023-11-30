@@ -1,0 +1,12 @@
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+
+public class HoraAtual { // Corrected class name to HoraAtual
+
+    public static void main(String[] args) {
+        LocalTime currentTime = LocalTime.now(); // Renamed variable to currentTime
+
+        System.out.println("O horário atual é: " + currentTime.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM)));
+    }
+}
