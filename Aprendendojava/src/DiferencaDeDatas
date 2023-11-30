@@ -1,0 +1,35 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+
+public class DiferencaDeDatas {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite a primeira data no formato yyyy-MM-dd:");
+        String data1 = scanner.nextLine();
+
+        System.out.println("Digite a segunda data no formato yyyy-MM-dd:");
+        String data2 = scanner.nextLine();
+
+        LocalDate data1Convertida = LocalDate.parse(data1);
+        LocalDate data2Convertida = LocalDate.parse(data2);
+
+        Period periodo = Period.between(data1Convertida, data2Convertida);
+        int dias = periodo.getDays();
+        int meses = periodo.getMonths();
+        int anos = periodo.getDays();
+
+
+
+        if (anos == 0 && meses == 0) {
+            System.out.println("A segunda data é anterior à primeira.");
+        } else if (anos == 0) {
+            System.out.println("As duas datas são iguais.");
+        } else {
+            System.out.println("A segunda data é posterior à primeira.");
+            System.out.println("A diferença entre as duas datas é de " + anos + " anos, " + meses + " meses e " + dias + " dias.");
+        }
+    }
+}
