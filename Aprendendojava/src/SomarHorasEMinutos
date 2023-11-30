@@ -1,0 +1,29 @@
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class SomarHorasEMinutos {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite uma hora no formato HH:mm:");
+        String hora = scanner.nextLine();
+
+        LocalTime horaConvertida = LocalTime.parse(hora);
+
+        System.out.println("Digite o número de minutos a serem somados:");
+        String minutosInput = scanner.nextLine();
+
+        while (!scanner.hasNextInt()) {
+            System.out.println("Digite um número inteiro válido para os minutos.");
+            minutosInput = scanner.nextLine();
+        }
+
+        int minutos = scanner.nextInt();
+
+        LocalTime horaSoma = horaConvertida.plusMinutes(minutos);
+
+        System.out.println("A hora resultante é " + horaSoma.format(DateTimeFormatter.ofPattern("HH:mm")));
+    }
+}
