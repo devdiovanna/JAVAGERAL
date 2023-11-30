@@ -1,0 +1,16 @@
+public class IndexOutOfBoundsExceptionExample {
+
+    public static void main(String[] args) {
+        List<String> lista = new ArrayList<>();
+
+        lista.add("Item 1");
+        lista.add("Item 2");
+        lista.add("Item 3");
+
+        try {
+            System.out.println(lista.get(5));
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("O índice é inválido.");
+        }
+    }
+}
