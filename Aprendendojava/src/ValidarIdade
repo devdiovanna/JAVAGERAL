@@ -1,0 +1,23 @@
+public class ValidarIdade {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite sua idade: ");
+        String idadeStr = scanner.nextLine();
+
+        try {
+            int idade = Integer.parseInt(idadeStr);
+
+            if (idade < 0) {
+                throw new IllegalArgumentException("Idade não pode ser negativa.");
+            } else if (idade > 150) {
+                throw new IllegalArgumentException("Idade não pode ser superior a 150 anos.");
+            } else {
+                System.out.println("Sua idade é: " + idade);
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
