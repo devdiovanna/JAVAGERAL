@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class TratamentoDeExcecoesEmMetodos {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite um número inteiro: ");
+        int numero = scanner.nextInt();
+
+        try {
+            System.out.println("O número inteiro é " + calcularRaizQuadrada(numero));
+        } catch (ArithmeticException e) {
+            System.out.println("O número não pode ser negativo: " + e.getMessage());
+        }
+    }
+
+    public static double calcularRaizQuadrada(int numero) throws ArithmeticException {
+        if (numero < 0) {
+            throw new ArithmeticException("O número não pode ser negativo.");
+        }
+
+        return Math.sqrt(numero);
+    }
+}
