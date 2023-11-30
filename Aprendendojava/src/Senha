@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Senha {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String usuario, senha;
+        boolean credenciaisValidas = false;
+
+        do {
+            System.out.printf("Digite um nome de usuário: ");
+            usuario = scanner.nextLine();
+            System.out.printf("Digite uma senha: ");
+            senha = scanner.nextLine();
+
+            if (usuario.equals(senha)) {
+                System.out.println("Usuário e senha não podem ser iguais.");
+            } else {
+                credenciaisValidas = true;
+            }
+        } while (!credenciaisValidas);
+
+        System.out.println("Cadastro realizado com sucesso!");
+    }
+}
