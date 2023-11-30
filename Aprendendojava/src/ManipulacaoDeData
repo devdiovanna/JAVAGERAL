@@ -1,0 +1,16 @@
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class ManipulacaoDeData {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite uma data no formato yyyy-MM-dd:");
+        String data = scanner.nextLine();
+
+        LocalDate dataConvertida = LocalDate.parse(data);
+
+        System.out.println("O dia do mês é " + dataConvertida.getDayOfMonth());
+    }
+}
