@@ -1,0 +1,31 @@
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class CalculoDeIdade {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite sua data de nascimento no formato yyyy-MM-dd:");
+        String dataNascimento = scanner.nextLine();
+
+        LocalDate dataAtual = LocalDate.now();
+        LocalDate dataNascimentoConvertida = LocalDate.parse(dataNascimento);
+
+        int anos = dataAtual.getYear() - dataNascimentoConvertida.getYear();
+        int meses = dataAtual.getMonthValue() - dataNascimentoConvertida.getMonthValue();
+        int dias = dataAtual.getDayOfMonth() - dataNascimentoConvertida.getDayOfMonth();
+
+        if (meses < 0) {
+            anos--;
+            meses += 12;
+        }
+
+        if (dias < 0) {
+            meses--;
+            dias += 30;
+        }
+
+        System.out.println("Sua idade é: " + anos + " anos, " + meses + " meses e " + dias + " dias.");
+    }
+}
