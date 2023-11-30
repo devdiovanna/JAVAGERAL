@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class SaldoInsuficienteException extends Exception {
+
+    private double valorSaque;
+
+    public SaldoInsuficienteException(double valorSaque) {
+        super("Saldo insuficiente para saque de R$" + valorSaque);
+        this.valorSaque = valorSaque;
+    }
+
+    public double getValorSaque() {
+        return valorSaque;
+    }
+}
+
+class ProgramaBancario {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite o saldo da conta: ");
+        double saldo = scanner.nextDouble();
+
+        System.out.println("Digite o valor do saque: ");
+        double valorSaque = scanner.nextDouble();
+
+        try {
+            if (valorSaque > saldo) {
+                throw new SaldoInsuficienteException(valorSaque);
+            }
+
+            System.out.println("Saque realizado com sucesso.");
+        } catch (SaldoInsuficienteException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
