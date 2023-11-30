@@ -1,0 +1,26 @@
+public class EncadeamentoExcecoes {
+
+    public static void main(String[] args) {
+        try {
+            throw new MinhaExcecao("Erro original");
+        } catch (MinhaExcecao e) {
+            System.out.println(e.getMessage());
+
+            throw new OutraExcecao("Erro secundário", e);
+        }
+    }
+}
+
+class MinhaExcecao extends Exception {
+
+    public MinhaExcecao(String message) {
+        super(message);
+    }
+}
+
+class OutraExcecao extends Exception {
+
+    public OutraExcecao(String message, Throwable cause) {
+        super(message, cause);
+    }
+}
