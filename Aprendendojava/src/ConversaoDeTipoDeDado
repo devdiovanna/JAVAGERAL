@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class ConversaoDeTipoDeDado {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite um número inteiro: ");
+        String entrada = scanner.nextLine();
+
+        try {
+            int numero = Integer.parseInt(entrada);
+            System.out.println("O número inteiro é " + numero);
+        } catch (NumberFormatException e) {
+            System.out.println("A entrada não é um número inteiro.");
+        }
+    }
+}
