@@ -1,0 +1,20 @@
+public class ConcatenacaoDeStrings {
+
+    public static String concatenar(List<String> strings) {
+        StringBuilder sb = new StringBuilder();
+
+        for (String string : strings) {
+            sb.append(string);
+        }
+
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        List<String> strings = Arrays.asList("Olá, ", "mundo!");
+
+        String concatenada = concatenar(strings);
+
+        System.out.println(concatenada);
+    }
+}
