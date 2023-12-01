@@ -1,0 +1,14 @@
+public class ConversorDeTemperatura {
+
+    public static double celsiusParaFahrenheit(double celsius) {
+        return (celsius * 9 / 5) + 32;
+    }
+
+    public static void main(String[] args) {
+        double temperaturaCelsius = 20;
+
+        double temperaturaFahrenheit = celsiusParaFahrenheit(temperaturaCelsius);
+
+        System.out.println(temperaturaCelsius + " graus Celsius é equivalente a " + temperaturaFahrenheit + " graus Fahrenheit");
+    }
+}
