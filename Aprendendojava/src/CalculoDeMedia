@@ -1,0 +1,20 @@
+public class CalculoDeMedia {
+
+    public static double media(int[] numeros) {
+        double soma = 0;
+
+        for (int numero : numeros) {
+            soma += numero;
+        }
+
+        return soma / numeros.length;
+    }
+
+    public static void main(String[] args) {
+        int[] numeros = {1, 2, 3, 4, 5};
+
+        double media = media(numeros);
+
+        System.out.println("A média é " + media);
+    }
+}
