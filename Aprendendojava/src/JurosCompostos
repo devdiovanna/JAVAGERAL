@@ -1,0 +1,16 @@
+public class JurosCompostos {
+
+    public static double calcular(double principal, double taxaJuros, int tempo) {
+        return principal * Math.pow(1 + taxaJuros / 100, tempo);
+    }
+
+    public static void main(String[] args) {
+        double principal = 1000;
+        double taxaJuros = 0.05;
+        int tempo = 5;
+
+        double montante = calcular(principal, taxaJuros, tempo);
+
+        System.out.println("O montante final é de " + montante);
+    }
+}
