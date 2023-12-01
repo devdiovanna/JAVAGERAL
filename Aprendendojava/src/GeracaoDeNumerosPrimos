@@ -1,0 +1,36 @@
+public class GeracaoDeNumerosPrimos {
+
+    public static List<Integer> gerar(int n) {
+        List<Boolean> primos = new ArrayList<>();
+
+        for (int i = 2; i <= n; i++) {
+            primos.add(true);
+        }
+
+        for (int i = 2; i * i <= n; i++) {
+            if (primos.get(i)) {
+                for (int j = i * i; j <= n; j += i) {
+                    primos.set(j, false);
+                }
+            }
+        }
+
+        List<Integer> resultado = new ArrayList<>();
+
+        for (int i = 2; i <= n; i++) {
+            if (primos.get(i)) {
+                resultado.add(i);
+            }
+        }
+
+        return resultado;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> primos = gerar(100);
+
+        for (int primo : primos) {
+            System.out.println(primo);
+        }
+    }
+}
