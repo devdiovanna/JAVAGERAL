@@ -1,0 +1,38 @@
+public class Produto {
+
+    public String descricao;
+    public String nome;
+    public boolean disponibilidade;
+    public String identificador;
+    public double preco;
+
+    public static void main(String[] args) {
+
+        // Criando um produto lâmpada
+        Produto produtoLampada = new Produto();
+        produtoLampada.descricao = "Super lampada 1200w 500horas de uso";
+        produtoLampada.nome = "Super Lampada";
+        produtoLampada.disponibilidade = true;
+        produtoLampada.identificador = "045634534";
+
+        // Criando um produto panela
+        Produto produtoPanela = new Produto();
+        produtoPanela.descricao = "Panela tramoteno 3L antiaderente";
+        produtoPanela.nome = "Panela Tramoteno 3L";
+        produtoPanela.preco = 150.0;
+        produtoPanela.disponibilidade = false;
+        produtoPanela.identificador = "045634535";
+
+        // Calculando o total
+        double total = calcularTotal(produtoLampada, produtoPanela);
+
+        // Imprimindo o total
+        System.out.printf("Total: R$ %.2f\n", total);
+
+    }
+
+    public static double calcularTotal(Produto produto1, Produto produto2) {
+        return produto1.preco + produto2.preco;
+    }
+
+}
