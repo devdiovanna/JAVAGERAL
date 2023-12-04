@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Testessssss {
+
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa("João da Silva", 30);
+
+        Carro carro1 = new Carro("Fiat", "Uno", 2023);
+        Carro carro2 = new Carro("Volkswagen", "Gol", 2022);
+
+        pessoa.adicionarCarro(carro1);
+        pessoa.adicionarCarro(carro2);
+
+        System.out.println("A pessoa possui " + pessoa.getCarros().size() + " carros.");
+
+        pessoa.removerCarro(carro1);
+
+        System.out.println("A pessoa possui " + pessoa.getCarros().size() + " carros.");
+    }
+
+    static class Pessoa {
+        private String nome;
+        private int idade;
+        private List<Carro> carros;
+
+        public Pessoa(String nome, int idade) {
+            this.nome = nome;
+            this.idade = idade;
+            this.carros = new ArrayList<>();
+        }
+
+        public void adicionarCarro(Carro carro) {
+            this.carros.add(carro);
+        }
+
+        public void removerCarro(Carro carro) {
+            this.carros.remove(carro);
+        }
+
+        public List<Carro> getCarros() {
+            return this.carros;
+        }
+    }
+
+    static class Carro {
+        private String marca;
+        private String modelo;
+        private int ano;
+
+        public Carro(String marca, String modelo, int ano) {
+            this.marca = marca;
+            this.modelo = modelo;
+            this.ano = ano;
+        }
+    }
+}
+
+
