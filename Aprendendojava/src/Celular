@@ -1,0 +1,30 @@
+public class Celular {
+    // Atributos
+    private String marca;
+    private String modelo;
+    private String ano;
+    private double porcentagemBateria;
+
+    // Construtor
+    public Celular(String marca, String modelo, String ano) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.porcentagemBateria = 100.0;
+    }
+
+    // Métodos
+    public void tirarFoto() {
+        porcentagemBateria -= 10.0;
+        if (porcentagemBateria < 0) porcentagemBateria = 0;
+    }
+
+    public void recarregar() {
+        porcentagemBateria = 100.0;
+    }
+
+    public void rodarAplicativo(String nomeAplicativo) {
+        porcentagemBateria -= 5.0;
+        if (porcentagemBateria < 0) porcentagemBateria = 0;
+    }
+}
