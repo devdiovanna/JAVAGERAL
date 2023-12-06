@@ -1,0 +1,89 @@
+public class Curso {
+
+    private String titulo;
+    private String descricao;
+    private double precoMensal;
+    private int duracao;
+    private Turno turno;
+    private NivelCurso nivel;
+    private StatusCurso status;
+
+    public Curso(String titulo, String descricao, double precoMensal, int duracao, Turno turno, NivelCurso nivel, StatusCurso status) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.precoMensal = precoMensal;
+        this.duracao = duracao;
+        this.turno = turno;
+        this.nivel = nivel;
+        this.status = status;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public double getPrecoMensal() {
+        return precoMensal;
+    }
+
+    public void setPrecoMensal(double precoMensal) {
+        this.precoMensal = precoMensal;
+    }
+
+    public int getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(int duracao) {
+        this.duracao = duracao;
+    }
+
+    public Turno getTurno() {
+        return turno;
+    }
+
+    public void setTurno(Turno turno) {
+        this.turno = turno;
+    }
+
+    public NivelCurso getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(NivelCurso nivel) {
+        this.nivel = nivel;
+    }
+
+    public StatusCurso getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusCurso status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "titulo='" + titulo + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", precoMensal=" + precoMensal +
+                ", duracao=" + duracao +
+                ", turno=" + turno +
+                ", nivel=" + nivel +
+                ", status=" + status +
+                '}';
+    }
+}
