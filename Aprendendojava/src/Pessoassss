@@ -1,0 +1,102 @@
+public class Pessoa {
+
+    private String nome;
+    private int idade;
+    private String email;
+
+    /**
+     * Construtor padrão que inicializa os atributos com valores padrão.
+     */
+    public Pessoa() {
+        this.nome = "";
+        this.idade = 0;
+        this.email = "";
+    }
+
+    /**
+     * Construtor personalizado que permite a inicialização dos atributos durante a criação do objeto.
+     *
+     * @param nome    Nome da pessoa.
+     * @param idade   Idade da pessoa.
+     * @param email   Endereço de e-mail da pessoa.
+     */
+    public Pessoa(String nome, int idade, String email) {
+        this.nome = nome;
+        this.idade = idade;
+        this.email = email;
+    }
+
+    /**
+     * Construtor de cópia que aceita outro objeto Pessoa como parâmetro e cria uma cópia profunda.
+     *
+     * @param pessoa Objeto Pessoa a ser copiado.
+     */
+    public Pessoa(Pessoa pessoa) {
+        this.nome = pessoa.nome;
+        this.idade = pessoa.idade;
+        this.email = pessoa.email;
+    }
+
+    /**
+     * Retorna o nome da pessoa.
+     *
+     * @return Nome da pessoa.
+     */
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * Define o nome da pessoa.
+     *
+     * @param nome Novo nome da pessoa.
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    /**
+     * Retorna a idade da pessoa.
+     *
+     * @return Idade da pessoa.
+     */
+    public int getIdade() {
+        return idade;
+    }
+
+    /**
+     * Define a idade da pessoa.
+     *
+     * @param idade Nova idade da pessoa.
+     */
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    /**
+     * Retorna o endereço de e-mail da pessoa.
+     *
+     * @return Endereço de e-mail da pessoa.
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * Define o endereço de e-mail da pessoa.
+     *
+     * @param email Novo endereço de e-mail da pessoa.
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", email='" + email + '\'' +
+                '}';
+    }
+}
