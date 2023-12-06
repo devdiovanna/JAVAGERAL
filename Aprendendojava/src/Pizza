@@ -1,0 +1,72 @@
+public class Pizza {
+
+    private TamanhoPizza tamanho;
+    private List<Sabor> sabores;
+    private StatusPizza status;
+    private boolean comBorda;
+
+    public Pizza(TamanhoPizza tamanho, List<Sabor> sabores, StatusPizza status, boolean comBorda) {
+        this.tamanho = tamanho;
+        this.sabores = sabores;
+        this.status = status;
+        this.comBorda = comBorda;
+    }
+
+    public TamanhoPizza getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(TamanhoPizza tamanho) {
+        this.tamanho = tamanho;
+    }
+
+    public List<Sabor> getSabores() {
+        return sabores;
+    }
+
+    public void setSabores(List<Sabor> sabores) {
+        this.sabores = sabores;
+    }
+
+    public StatusPizza getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusPizza status) {
+        this.status = status;
+    }
+
+    public boolean isComBorda() {
+        return comBorda;
+    }
+
+    public void setComBorda(boolean comBorda) {
+        this.comBorda = comBorda;
+    }
+
+    public double getPreco() {
+        double precoBase = 0;
+        switch (tamanho) {
+            case P:
+                precoBase = 20.0;
+                break;
+            case M:
+                precoBase = 40.0;
+                break;
+            case G:
+                precoBase = 60.0;
+                break;
+        }
+
+        int quantidadeSabores = sabores.size();
+        if (quantidadeSabores > 1) {
+            precoBase += (quantidadeSabores - 1) * 5.0;
+        }
+
+        return precoBase;
+    }
+
+    public void alterarStatus(StatusPizza novoStatus) {
+        this.status = novoStatus;
+    }
+}
