@@ -1,0 +1,30 @@
+public class Sistema {
+
+    private StatusSistema status;
+
+    public Sistema() {
+        this.status = StatusSistema.EXECUCAO;
+    }
+
+    public StatusSistema getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusSistema status) {
+        this.status = status;
+    }
+
+    public void notificarStatus() {
+        switch (status) {
+            case EXECUCAO:
+                System.out.println("O sistema está em execução.");
+                break;
+            case PAUSADO:
+                System.out.println("O sistema está pausado.");
+                break;
+            case FALHA:
+                System.out.println("O sistema está em falha.");
+                break;
+        }
+    }
+}
