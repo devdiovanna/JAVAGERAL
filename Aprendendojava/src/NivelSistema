@@ -1,0 +1,16 @@
+public enum NivelSistema {
+
+    SEM_ACESSO("Sem acesso"),
+    ACESSO_BASICO("Acesso básico"),
+    ACESSO_AVANCADO("Acesso avançado");
+
+    private String descricao;
+
+    NivelSistema(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+}
