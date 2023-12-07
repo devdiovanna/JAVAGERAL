@@ -1,0 +1,37 @@
+public class Professor extends Pessoa {
+
+    private String titulacao;
+    private String materia;
+
+    public Professor(String nome, int idade, String titulacao, String materia) {
+        super(nome, idade);
+        this.titulacao = titulacao;
+        this.materia = materia;
+    }
+
+    public String getTitulacao() {
+        return titulacao;
+    }
+
+    public void setTitulacao(String titulacao) {
+        this.titulacao = titulacao;
+    }
+
+    public String getMateria() {
+        return materia;
+    }
+
+    public void setMateria(String materia) {
+        this.materia = materia;
+    }
+
+    @Override
+    public String toString() {
+        return "Professor{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", titulacao='" + titulacao + '\'' +
+                ", materia='" + materia + '\'' +
+                '}';
+    }
+}
