@@ -1,0 +1,23 @@
+public class Bicicleta implements Veiculo {
+
+    private double velocidade;
+
+    public Bicicleta() {
+        this.velocidade = 10;
+    }
+
+    @Override
+    public void acelerar() {
+        velocidade += 5;
+    }
+
+    @Override
+    public void frear() {
+        velocidade -= 5;
+    }
+
+    @Override
+    public double calcularConsumoDeCombustivel(double distanciaPercorrida) {
+        return 0;
+    }
+}
