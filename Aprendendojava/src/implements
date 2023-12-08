@@ -1,0 +1,29 @@
+public class Retangulo implements Forma {
+
+    private int x;
+    private int y;
+    private int largura;
+    private int altura;
+
+    public Retangulo(int x, int y, int largura, int altura) {
+        this.x = x;
+        this.y = y;
+        this.largura = largura;
+        this.altura = altura;
+    }
+
+    @Override
+    public void desenhar() {
+        // Desenha o retângulo
+    }
+
+    @Override
+    public void mover(int x, int y) {
+        // Move o retângulo
+    }
+
+    @Override
+    public void redimensionar(int largura, int altura) {
+        // Redimensiona o retângulo
+    }
+}
