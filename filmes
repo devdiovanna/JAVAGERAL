@@ -1,0 +1,17 @@
+INSERT INTO filmes (titulo, genero, classificacao_indicativa, sinopse, data_lancamento)
+VALUES
+  ('O Poderoso Chefão', 'Drama', '18 anos', 'A história de Don Vito Corleone, um poderoso chefe da máfia ítalo-americana em Nova Iorque.', '1972-03-24'),
+  ('O Senhor dos Anéis: A Sociedade do Anel', 'Fantasia', '12 anos', 'A jornada de Frodo Bolseiro para destruir o Um Anel, uma poderosa arma criada pelo Lorde das Trevas Sauron.', '2001-12-10'),
+  ('O Rei Leão', 'Animação', 'Livre', 'A história de Simba, um jovem leão que deve assumir o trono de seu pai, Mufasa, depois que ele é morto por seu tio Scar.', '1994-06-15'),
+  ('Titanic', 'Romance', '12 anos', 'A história de Jack Dawson e Rose DeWitt Bukater, dois jovens de origens diferentes que se apaixonam a bordo do Titanic, um luxuoso transatlântico que naufraga em sua viagem inaugural.', '1997-11-19'),
+  ('Star Wars: Episódio IV - Uma Nova Esperança', 'Ficção científica', '12 anos', 'A história de Luke Skywalker, um jovem fazendeiro que se junta à Rebelião para lutar contra o Império Galáctico.', '1977-05-25'),
+  ('Pulp Fiction', 'Crime', '18 anos', 'Uma série de histórias interconectadas envolvendo criminosos e pessoas comuns em Los Angeles.', '1994-10-14'),
+  ('O Exterminador do Futuro', 'Ficção científica', '16 anos', 'A história de Sarah Connor, uma jovem que é perseguida por um ciborgue assassino enviado do futuro para matá-la.', '1984-10-26'),
+  ('Indiana Jones e os Caçadores da Arca Perdida', 'Aventura', 'Livre', 'A história de Indiana Jones, um arqueólogo que embarca em uma missão para encontrar a Arca da Aliança.', '1981-06-12'),
+  ('O Psicólogo', 'Suspense', '16 anos', 'A história de John Nash, um jovem matemático que sofre de esquizofrenia paranoide.', '2001-12-21'),
+  ('E.T. - O Extraterrestre', 'Ficção científica', 'Livre', 'A história de Elliott, um jovem que faz amizade com um alienígena que fica preso na Terra.', '1982-06-11'),
+  ('O Senhor dos Anéis: As Duas Torres', 'Fantasia', '12 anos', 'A continuação da jornada de Frodo Bolseiro para destruir o Um Anel.', 2002-12-18'),
+  ('O Senhor dos Anéis: O Retorno do Rei', 'Fantasia', '12 anos', 'A conclusão da jornada de Frodo Bolseiro para destruir o Um Anel.', 2003-12-25'),
+  ('O Rei Leão II: O Reino de Simba', 'Animação', 'Livre', 'A história de Simba, o filho de Mufasa, que deve assumir o trono de seu pai e enfrentar seu tio Scar.', 1998-05-15'),
+  ('Harry Potter e a Pedra Filosofal', 'Fantasia', 'Livre', 'A história de Harry Potter, um jovem que descobre que é um bruxo e é aceito na Escola de Magia e Bruxaria de Hogwarts.', 2001-11-16'),
+  ('A Lista de Schindler', 'Drama', '16 anos', 'A história de Oskar Schindler, um empresário
