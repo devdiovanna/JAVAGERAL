@@ -1,0 +1,34 @@
+@RestController
+@RequestMapping("/filmes")
+public class FilmeController {
+
+    @Autowired
+    private FilmeRepository filmeRepository;
+
+    @GetMapping
+    public List<Filme> listar() {
+        return filmeRepository.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public Filme buscar(@PathVariable Long id) {
+        return filmeRepository.findById(id).orElse(null);
+    }
+
+    @PostMapping
+    public Filme salvar(@RequestBody Filme filme) {
+        return filmeRepository.save(filme);
+    }
+
+    @PutMapping("/{id}")
+    public Filme atualizar(@PathVariable Long id, @RequestBody Filme filme) {
+        filme.setId(id);
+        return filmeRepository.save(filme);
+    }
+
+    @DeleteMapping("/{id}")
+    public void excluir(@PathVariable Long id) {
+        filmeRepository.deleteById(id);
+    }
+
+}
