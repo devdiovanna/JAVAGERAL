@@ -1,0 +1,12 @@
+@GetMapping("/{id}")
+public Cliente buscar(@PathVariable Long id) {
+    Cliente cliente = clienteRepository.findById(id).orElse(null);
+
+    if (cliente == null) {
+        throw new EntityNotFoundException(
+            "Cliente com o ID " + id + " não existe."
+        );
+    }
+
+    return cliente;
+}
