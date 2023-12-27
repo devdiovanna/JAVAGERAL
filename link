@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Site de Notícias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Site de Notícias</h1>
+  </header>
+  <main>
+    <section class="news-feed">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="imagens/noticia-1.jpg" alt="Notícia 1">
+            <h2>Notícia 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, enim eu luctus tincidunt, tortor urna iaculis enim, et iaculis leo justo ac eros. Nullam euismod orci ac scelerisque iaculis.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="imagens/noticia-2.jpg" alt="Notícia 2">
+            <h2>Notícia 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, enim eu luctus tincidunt, tortor urna iaculis enim, et iaculis leo justo ac eros. Nullam euismod orci ac scelerisque iaculis.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="imagens/noticia-3.jpg" alt="Notícia 3">
+            <h2>Notícia 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper, enim eu luctus tincidunt, tortor urna iaculis enim, et iaculis leo justo ac eros. Nullam euismod orci ac scelerisque iaculis.</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2023</p>
+  </footer>
+</body>
+</html>
