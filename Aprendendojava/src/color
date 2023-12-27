@@ -1,0 +1,48 @@
+body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+}
+
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+main {
+  margin-top: 20px;
+}
+
+.news-feed {
+  list-style: none;
+}
+
+.news-feed li {
+  margin-bottom: 20px;
+}
+
+.news-feed li a {
+  display: block;
+  text-decoration: none;
+}
+
+.news-feed li a img {
+  width: 100px;
+  height: 100px;
+}
+
+.news-feed li a h2 {
+  margin-top: 10px;
+}
+
+.news-feed li a p {
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+}
