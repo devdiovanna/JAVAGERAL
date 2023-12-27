@@ -1,0 +1,27 @@
+package com.example.news;
+
+import java.time.LocalDate;
+import java.util.List;
+
+public class NewsArticle {
+
+  private Long id;
+  private String title;
+  private String content;
+  private LocalDate publicationDate;
+  private List<String> categories;
+
+  public NewsArticle() {
+  }
+
+  public NewsArticle(Long id, String title, String content, LocalDate publicationDate, List<String> categories) {
+    this.id = id;
+    this.title = title;
+    this.content = content;
+    this.publicationDate = publicationDate;
+    this.categories = categories;
+  }
+
+  public Long getId() {
+    return id;
+ 
